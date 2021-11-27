@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>Clock</title>
+<style>
+html {
+  scroll-behavior: smooth;
+}
+
+body{background-color:black;}
+
+#time {background-color:lightgrey; position:relative; color: red; font-size: 50px; font-family:small fonts; letter-spacing: 10px; 
+border:5px solid blue; padding:15px; box-shadow:5px 10px 15px 10px lime; border-radius:10px; height:100px; width:400px;}
+
+</style>
+<link rel='shortcut icon' type='image/png' href='https://www.clipartmax.com/png/middle/286-2866654_fast-turnaround-android-clock-icon.png'>
+</head>
+
+
+<body onload="newTime();">
+
+<marquee bgcolor='cyan' height='55' color='Fushcia'><font size='12'>⏰🕰Tick-Tock-Tick-Tock🕰⏰</marquee>
+
+<a href='#time' style='position:fixed; right:0px; top:55px; background-color:yellow; text-decoration:none; border:5px solid purple; border-radius:5px; padding:10px; margin:10px;'> Digital Clock</a>
+<a href='#clock' style='position:fixed; right:150px; top:55px; background-color:yellow; text-decoration:none; border:5px solid purple; border-radius:5px; padding:10px;  margin:10px;'>Mechanical clock</a>
+
+<br><br><br><br><br><br><br><br><br><br>
+
+<center>
+<font color='silver' >
+<h1> Digital Clock</h1>
+<div id="time">
+
+<script>
+function newTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+ 
+  var display= document.getElementById('time').innerHTML = (h+ ":" +m +":" + s)
+  var t = setTimeout(newTime, 500);
+
+
+}
+
+</script>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div id='clock'>
+<h1> Mechanical Clock</h1>
+<iframe src='https://srishti-210.github.io/43-DN/' height='500' width='1200'></iframe>
+</div>
+</center>
+</body>
+
+</html>
+
+
